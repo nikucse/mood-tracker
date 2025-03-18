@@ -15,7 +15,7 @@ const emojis = [
 
 document.addEventListener('DOMContentLoaded', () => {
   loadEmojis();
-  // updateTimeline();
+  updateTimeline();
   document
     .getElementById('timeline')
     .addEventListener('change', updateTimeline);
