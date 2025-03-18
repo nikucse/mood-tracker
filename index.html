@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-800">
+    <div class="pt-8 flex items-center justify-center">
+      <div class="bg-white rounded-lg shadow-lg p-6 w-96 text-center">
+        <h1 class="pb-4 text-2xl font-semibold">How's Your Mood Today?</h1>
+
+        <input
+          id="emojiInput"
+          type="text"
+          placeholder="Select an emoji"
+          readonly
+          class="w-full p-3 border-2 border-gray-300 rounded-lg text-center text-xl cursor-pointer focus:outline-none focus:border-blue-500 mb-4"
+        />
+
+        <div id="emojiGrid" class="grid grid-cols-6 gap-3"></div>
+        <button
+          id="logMood"
+          class="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          Log Mood
+        </button>
+
+        <div id="successMessage" class="hidden mt-4 text-green-600">
+          Mood logged successfully!
+        </div>
+        <div id="failedMessage" class="hidden mt-4 text-red-600">
+          Mood already logged.
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 flex items-center justify-center">
+      <div class="bg-white rounded-lg shadow-lg p-6 w-96 text-center">
+        <h1 class="pb-4 text-xl font-semibold">
+          Select Timeline to See Your Mood
+        </h1>
+        <select
+          id="timeline"
+          class="p-3 border-2 border-gray-300 rounded-lg text-center text-xl cursor-pointer focus:outline-none focus:border-blue-500 mb-4"
+        >
+          <option selected value="day">Day</option>
+          <option value="week">Week</option>
+          <option value="month">Month</option>
+        </select>
+        <div id="timelineView"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
